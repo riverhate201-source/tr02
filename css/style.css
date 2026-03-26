@@ -53,10 +53,10 @@ body {
 .main_visual {
     position: relative;
     height: calc(100vh - 96px);
-    background: url(../images/_index_bg01.jpg);
+    background: url(../images/index_bg01.jpg);
 }
 
-/* 👇 가상요소로 어두운 막 만들기 👇 */
+
 .main_visual::before {
     content: "";
     position: absolute;
@@ -68,12 +68,11 @@ body {
     /* 검은색 50% 투명도 */
 }
 
-/* 🚨 주의: 가상요소를 쓰면 막이 글씨도 덮어버릴 수 있어요! 
-   .main_visual 안에 있는 텍스트들을 막 위로 올려줘야 합니다. */
+
 .main_visual * {
     position: relative;
     z-index: 1;
-    /* 글씨들을 어두운 막 위로 띄움 */
+
 }
 
 .main_visual .slg {
