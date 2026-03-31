@@ -4,168 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flower in your life</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>html 01 - tag를 알아보자.</title>
 
+    <style>
+        /* * [ Block 요소 - div ] 
+         * div는 대표적인 '블록(박스)' 형태의 태그입니다.
+         * 기본적으로 가로 전체(100%)를 차지하며, 블록처럼 위에서 아래로 차곡차곡 쌓입니다.
+         */
+        div {
+            background: #f00;
+            /* 배경색을 빨간색(red)으로 설정합니다. */
+            width: 400px;
+            /* 박스의 가로 너비를 400px로 고정합니다. (크기 지정 가능!) */
+            height: 400px;
+            /* 박스의 세로 높이를 400px로 고정합니다. */
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+            margin-top: 40px;
+            /* 박스 바깥쪽 위 여백을 40px 줍니다. (다른 요소와 벌어짐) */
+            margin-bottom: 40px;
+            /* 박스 바깥쪽 아래 여백을 40px 줍니다. */
+
+            padding-left: 40px;
+            /* 박스 안쪽 왼쪽 여백을 40px 줍니다. (글씨와 테두리 사이 간격) */
+            padding-right: 40px;
+            /* 박스 안쪽 오른쪽 여백을 40px 줍니다. */
+
+            border: 1px solid #333;
+            /* 박스 테두리에 1px 두께의 짙은 회색 실선을 그립니다. */
+        }
+
+        /* * [ Inline 요소 - span, a ]
+         * span과 a는 대표적인 '인라인(글자)' 형태의 태그입니다.
+         * 글자 크기만큼만 자리를 차지하며, 옆으로 나란히 이어집니다.
+         */
+        span,
+        a {
+            background: #ff0;
+            /* 배경색을 노란색(yellow)으로 설정합니다. */
+
+            /* [주의] 인라인 요소는 박스가 아니기 때문에 width와 height 값이 무시됩니다! */
+            width: 400px;
+            height: 400px;
+
+            /* [주의] 인라인 요소에는 위아래 바깥 여백(margin-top/bottom)이 들어가지 않습니다! */
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            /* 하지만 좌우 여백(margin, padding)은 정상적으로 잘 들어갑니다. */
+            padding-left: 40px;
+            padding-right: 40px;
+
+            /* * [정확한 사실] 
+             * 인라인 요소에 위아래 패딩(padding)을 주면 시각적으로 색칠은 커지게 나옵니다.
+             * 하지만 진짜 박스가 커진 게 아니라서, 주변 줄들을 밀어내지 못하고 다른 글자 위로 겹쳐버립니다.
+             * (즉, 레이아웃 공간을 차지하지 않습니다.)
+             */
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="header">
-        <div class="inner">
-            <h1>
-                <a href="/">
-                    <img src="./images/Untitlhhhhhhhed-1.jpg" alt="다름디자인">
-                </a>
-            </h1>
-            <nav class="gnb">
-                <ul>
-                    <li>
-                        <a href="">회사 소개</a>
-                        <ul>
-                            <li><a href="">menu01</a></li>
-                            <li><a href="">menu02</a></li>
-                            <li><a href="">menu03</a></li>
-                            <li><a href="">menu04</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">사업 소개</a>
-                        <ul>
-                            <li><a href="">menu01</a></li>
-                            <li><a href="">menu02</a></li>
-                            <li><a href="">menu03</a></li>
-                            <li><a href="">menu04</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">제품 갤러리</a>
-                        <ul>
-                            <li><a href="">menu01</a></li>
-                            <li><a href="">menu02</a></li>
-                            <li><a href="">menu03</a></li>
-                            <li><a href="">menu04</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">온라인 문의</a>
-                        <ul>
-                            <li><a href="">menu01</a></li>
-                            <li><a href="">menu02</a></li>
-                            <li><a href="">menu03</a></li>
-                            <li><a href="">menu04</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">고객 지원</a>
-                        <ul>
-                            <li><a href="">menu01</a></li>
-                            <li><a href="">menu02</a></li>
-                            <li><a href="">menu03</a></li>
-                            <li><a href="">menu04</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="utils">
-                <i data-lucide="menu"></i>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="main_visual">
-            <div class="slg">
-                <h2>Flower in your life</h2>
-                <p>바쁘게 스쳐 지나가는 계절의 아름다움을 곁에 두고, 매일 조금씩 더 나를 아끼고 사랑하게 되는 다정한 시간</p>
-            </div>
-        </section>
-        <section class="main_info default">
-            <div class="title">
-                <h2>Flower in your life</h2>
-                <p>당신이라는 작은 씨앗이 어떤 고유한 색깔과 향기의 꽃으로 만개할지, 그 찬란하고 아름다운 여정을 응원하며</p>
-            </div>
-            <div class="inner">
-                <div class="itm">
-                    <div class="img_box">
-                        <img src="./images/main_info01.jpg" alt="다름디자인">
-                    </div>
-                    <div class="txt_box">
-                        <strong>Flower in your life</strong>
-                        <p>매일 똑같이 흘러가는 무채색의 일상 속, 당신의 지친 마음에 작은 위안으로 피어나는 따뜻한 순간들.</p>
-                    </div>
-                </div>
-                <div class="itm">
-                    <div class="img_box">
-                        <img src="./images/main_info03.jpg" alt="다름디자인">
-                    </div>
-                    <div class="txt_box">
-                        <strong>Flower in your life</strong>
-                        <p>거창한 목표나 다짐 대신, 오늘 하루 내 기분을 조금 더 산뜻하게 만들어 줄 작은 꽃 한 송이와 함께하는 나른하고 여유로운 오후의 기록.</p>
-                    </div>
-                </div>
-                <div class="itm">
-                    <div class="img_box">
-                        <img src="./images/main_info02.jpg" alt="다름디자인">
-                    </div>
-                    <div class="txt_box">
-                        <strong>Flower in your life</strong>
-                        <p>복잡한 생각은 잠시 내려놓고, 좋아하는 노래를 틀어둔 채로 마음에 드는 꽃을 예쁜 화병에 꽂으며 완성하는 나만의 작고 소중한 힐링 루틴.</p>
-                    </div>
-                </div>
-                <div class="itm">
-                    <div class="img_box">
-                        <img src="./images/main_info04.jpg" alt="다름디자인">
-                    </div>
-                    <div class="txt_box">
-                        <strong>Flower in your life</strong>
-                        <p>퇴근길에 기분 내서 사 온 꽃 한 단으로 방 안의 공기가 화사하게 달라지는 마법, 쳇바퀴 같은 평범한 일상 속에서 가볍게 미소 지을 수 있는 예쁜 순간들.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="main_solution default">
-            <div class="inner">
-                <div class="itm">
-                    <div class="img_box">
-                        <img src="./images/main_solution02.jpg" alt="다름디자인">
-                    </div>
-                    <div class="txt_box">
-                        <strong>Flower in your life</strong>
-                        <p>거창한 목표나 다짐 대신, 오늘 하루 내 기분을 조금 더 산뜻하게 만들어 줄 작은 꽃 한 송이와 함께하는 나른하고 여유로운 오후의 기록.</p>
-                    </div>
-                </div>
+    <!-- 주석 -->
 
-                <div class="itm">
-                    <div class="img_box">
-                        <img src="./images/main_solution03.jpg" alt="다름디자인">
-                    </div>
-                    <div class="txt_box">
-                        <strong>Flower in your life</strong>
-                        <p>거창한 목표나 다짐 대신, 오늘 하루 내 기분을 조금 더 산뜻하게 만들어 줄 작은 꽃 한 송이와 함께하는 나른하고 여유로운 오후의 기록.</p>
-                    </div>
-                </div>
+    <!-- 첫 번째 박스에는 마진 탑을 주지 않고, 마지막 박스에는 마진 바텀을 주지 않는다.-->
+    <div>box</div>
+    <div>box</div>
 
-
-
-
-            </div>
-
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="inner">
-            <strong>&copy; flower in your life.</strong>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-    </script>
-
+    <!-- inline에는 위 아래 마진과 패딩이 들어가지 않는다. 오직 가로로만 넣을 수 있다. -->
+    <span>inline</span>
+    <span>inline</span>
+    <a href="">inline</a>
 </body>
 
 </html>
